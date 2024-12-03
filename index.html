@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,17 +34,117 @@
       };
     </script>
     <!-- css style  font-family -->
-    <style></style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+      .font-anton {
+        font-family: "Anton", sans-serif;
+      }
+    </style>
   </head>
-  <body class=" ">
-    <!-- header section start -->
-    <header class="container mx-auto"></header>
-    <!-- header section end -->
-    <!-- main section start -->
-    <main class="container mx-auto"></main>
-    <!-- main section end -->
-    <!-- footer section start -->
-    <footer></footer>
-    <!-- footer section end -->
+  <body class="font-poppins">
+    <main
+      class="min-h-screen text-white bg-[#1E1E1E] bg-[url(images/background.png)] bg-no-repeat bg-center text-center"
+    >
+      <section id="home-screen" class="home">
+        <div
+          class="flex flex-col items-center justify-center min-h-screen space-y-8"
+        >
+          <h1 class="text-7xl lg:text-[170px] font-anton">Alphabet class</h1>
+          <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+          <button
+            onclick="playNow()"
+            class="btn btn-primary bg-white hover:bg-white hover:text-black text-black"
+          >
+            Play Now
+          </button>
+        </div>
+      </section>
+      <section
+        id="playground-section"
+        class="hidden flex flex-col items-center"
+      >
+        <div class="my-10">
+          <div
+            class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] bg-[#FFFFFFB3]"
+          >
+            <div class="flex justify-center">
+              <p class="bg-[#2F2941] px-5 pb-4 rounded-b-xl">
+                Don't watch keyboard while playing...
+              </p>
+            </div>
+            <div class="flex justify-center items-center h-full">
+              <p id="alphabet" class="text-9xl text-black font-bold uppercase">
+                Y
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd id="e" class="kbd">e</kbd> <kbd id="q" class="kbd">q</kbd>
+            <kbd id="r" class="kbd">r</kbd>
+            <kbd id="t" class="kbd">t</kbd>
+            <kbd id="y" class="kbd">y</kbd>
+            <kbd id="u" class="kbd">u</kbd>
+            <kbd id="w" class="kbd">w</kbd>
+            <kbd id="i" class="kbd">i</kbd>
+            <kbd id="o" class="kbd">o</kbd>
+            <kbd id="p" class="kbd">p</kbd>
+          </div>
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd id="a" class="kbd">a</kbd>
+            <kbd id="s" class="kbd">s</kbd>
+            <kbd id="d" class="kbd">d</kbd>
+            <kbd id="f" class="kbd">f</kbd>
+            <kbd id="g" class="kbd">g</kbd>
+            <kbd id="h" class="kbd">h</kbd>
+            <kbd id="j" class="kbd">j</kbd>
+            <kbd id="k" class="kbd">k</kbd>
+            <kbd id="l" class="kbd">l</kbd>
+          </div>
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd id="z" class="kbd">z</kbd>
+            <kbd id="x" class="kbd">x</kbd>
+            <kbd id="c" class="kbd">c</kbd>
+            <kbd id="v" class="kbd">v</kbd>
+            <kbd id="b" class="kbd">b</kbd>
+            <kbd id="n" class="kbd">n</kbd>
+            <kbd id="m" class="kbd">m</kbd>
+            <kbd id="/" class="kbd">/</kbd>
+          </div>
+        </div>
+        <div class="flex justify-between w-4/5 m-auto">
+          <button
+            class="btn hover:bg-[#894189] bg-[#894189] text-white border-none rounded-full"
+          >
+            life
+            <img src="images/heard.svg" alt="" />
+            <span>1</span>
+          </button>
+          <button
+            class="btn hover:bg-[#360490] bg-[#360490] text-white border-none rounded-full"
+          >
+            Score
+            <img src="images/life.svg" alt="" />
+            <span>1</span>
+          </button>
+        </div>
+      </section>
+      <section class="flex justify-center items-center min-h-screen hidden">
+        <div class="space-y-3 bg-[#FFFFFF33] p-7 rounded-xl">
+          <h1 class="text-6xl">
+            <span class="font-bold">Score :</span><span> 14</span>
+          </h1>
+          <button class="btn">Play Again</button>
+          <p>Practice will make you Pro</p>
+        </div>
+      </section>
+    </main>
+    <script src="js/utility.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
